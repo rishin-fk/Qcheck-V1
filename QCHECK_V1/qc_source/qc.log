@@ -1,0 +1,39 @@
+2026-10-13 02:46:18,001 INFO MainThread SERVER_START database=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK\qc_source\qc_data.db exports=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK\qc_source\exports mode=daily
+2026-10-13 02:51:09,083 INFO MainThread SERVER_START database=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK\qc_source\qc_data.db exports=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK\qc_source\exports mode=daily
+2026-10-13 02:53:13,541 INFO MainThread SERVER_START database=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK\qc_source\qc_data.db exports=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK\qc_source\exports mode=daily
+2026-10-13 03:04:43,950 INFO excel-export EXCEL_UPDATED file=qc_2026-10-13_001.xlsx rows=1
+2026-10-13 03:10:04,699 INFO MainThread SERVER_START database=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK\qc_source\qc_data.db exports=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK\qc_source\exports mode=daily
+2026-10-13 15:14:40,840 INFO MainThread SOURCE_REFRESH revision=2 boxes=70 fsns=798
+2026-10-13 15:14:40,845 INFO MainThread SERVER_START database=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK_C\qc_source\qc_data.db source=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK_C\qc_source\qc_source.db refresh=5.0s
+2026-10-13 16:27:08,760 INFO MainThread SERVER_START database=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK_C\qc_source\qc_data.db source=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK_C\qc_source\qc_source.db refresh=5.0s
+2026-10-13 17:53:14,386 INFO MainThread SERVER_START database=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK_C\qc_source\qc_data.db source=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK_C\qc_source\qc_source.db refresh=5.0s
+2026-10-13 18:29:48,080 INFO MainThread SOURCE_REFRESH revision=1 boxes=311 fsns=6867
+2026-10-13 18:29:48,082 INFO MainThread SERVER_START database=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK_C\qc_source\qc_data.db source=C:\Users\rishikeshashokra.n\Desktop\Claude Projects\QCHECK_C\qc_source\qc_source.db refresh=5.0s
+2026-10-13 18:29:53,222 INFO source-refresh SOURCE_REFRESH revision=2 boxes=0 fsns=206
+2026-10-13 18:29:58,354 INFO source-refresh SOURCE_REFRESH revision=3 boxes=0 fsns=197
+2026-10-13 18:30:03,480 INFO source-refresh SOURCE_REFRESH revision=4 boxes=0 fsns=165
+2026-10-13 18:30:08,641 INFO source-refresh SOURCE_REFRESH revision=5 boxes=0 fsns=146
+2026-10-13 18:30:13,820 INFO source-refresh SOURCE_REFRESH revision=6 boxes=0 fsns=168
+2026-10-13 18:30:18,989 INFO source-refresh SOURCE_REFRESH revision=7 boxes=0 fsns=82
+2026-10-13 18:30:24,160 INFO source-refresh SOURCE_REFRESH revision=8 boxes=0 fsns=56
+2026-10-13 18:30:29,338 INFO source-refresh SOURCE_REFRESH revision=9 boxes=0 fsns=144
+2026-10-13 18:30:34,544 INFO source-refresh SOURCE_REFRESH revision=10 boxes=0 fsns=121
+2026-10-13 18:30:39,748 INFO source-refresh SOURCE_REFRESH revision=11 boxes=0 fsns=135
+2026-10-13 18:30:44,926 INFO source-refresh SOURCE_REFRESH revision=12 boxes=0 fsns=40
+2026-10-13 18:30:50,122 INFO source-refresh SOURCE_REFRESH revision=13 boxes=0 fsns=101
+2026-10-13 18:30:55,308 INFO source-refresh SOURCE_REFRESH revision=14 boxes=0 fsns=76
+2026-10-13 18:31:00,488 INFO source-refresh SOURCE_REFRESH revision=15 boxes=0 fsns=88
+2026-10-13 18:31:05,714 INFO source-refresh SOURCE_REFRESH revision=16 boxes=0 fsns=114
+2026-10-13 18:31:10,931 INFO source-refresh SOURCE_REFRESH revision=17 boxes=0 fsns=92
+2026-10-13 18:31:16,114 INFO source-refresh SOURCE_REFRESH revision=18 boxes=0 fsns=33
+2026-10-13 18:31:21,310 INFO source-refresh SOURCE_REFRESH revision=19 boxes=0 fsns=56
+2026-10-13 18:31:26,515 INFO source-refresh SOURCE_REFRESH revision=20 boxes=0 fsns=87
+2026-10-13 18:31:31,731 INFO source-refresh SOURCE_REFRESH revision=21 boxes=0 fsns=42
+2026-10-13 18:31:36,895 INFO source-refresh SOURCE_REFRESH revision=22 boxes=0 fsns=26
+2026-10-13 18:31:42,087 INFO source-refresh SOURCE_REFRESH revision=23 boxes=0 fsns=30
+2026-10-13 18:38:47,885 INFO source-refresh SOURCE_REFRESH revision=24 boxes=1 fsns=0
+2026-10-13 18:38:53,073 INFO source-refresh SOURCE_REFRESH revision=25 boxes=21 fsns=0
+2026-10-13 18:48:54,374 INFO source-refresh SOURCE_REFRESH revision=26 boxes=1 fsns=0
+2026-10-13 18:48:59,525 INFO source-refresh SOURCE_REFRESH revision=27 boxes=26 fsns=0
+2026-10-13 18:52:29,997 INFO source-refresh SOURCE_REFRESH revision=28 boxes=3 fsns=0
+2026-10-13 18:54:35,309 INFO source-refresh SOURCE_REFRESH revision=29 boxes=3 fsns=0

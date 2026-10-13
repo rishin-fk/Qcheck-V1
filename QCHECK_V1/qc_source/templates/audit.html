@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d32">
+  <title>QCheck</title>
+  <link rel="stylesheet" href="/static/audit.css?v=2">
+</head>
+<body>
+  <main class="app">
+    <header class="brand">
+      <div class="brand-mark" aria-hidden="true">Q</div>
+      <div><h1>QCheck</h1><p>Box audit &amp; packing</p></div>
+      <span class="brand-tag">QC</span>
+    </header>
+    <div id="sourceWarning" class="msg bad" role="status" hidden></div>
+    <div id="retryBanner" class="msg bad" hidden>
+      <span id="retryNote"></span>
+      <button id="btnRetry">Retry save</button>
+    </div>
+    <div id="msg" class="msg" role="status" hidden></div>
+
+    <section id="screen-box" class="screen active card">
+      <div class="step">01 &nbsp; START</div>
+      <h2>Ready for the next box</h2>
+      <p class="hint">Scan the box to begin.</p>
+      <label for="boxId">Box ID</label>
+      <input id="boxId" autocomplete="off" spellcheck="false" placeholder="Scan or enter Box ID">
+      <div class="operator-fields">
+        <div><label for="casperId">Casper ID</label><input id="casperId" autocomplete="off" placeholder="Your Casper ID"></div>
+        <div><label for="tableNo">Table No</label><input id="tableNo" autocomplete="off" placeholder="Table number"></div>
+      </div>
+      <div id="operatorNote" class="msg info" hidden></div>
+      <button id="btnLoadBox" class="primary wide">Load box &rarr;</button>
+    </section>
+
+    <section id="screen-choice" class="screen card">
+      <div class="step">02 &nbsp; CHOOSE</div>
+      <h2 id="choiceTitle"></h2>
+      <div id="choiceMsg" class="msg" hidden></div>
+      <div class="choice-actions">
+        <button id="btnQc" class="qc-choice"><strong>QC</strong><span>Scan and check items</span></button>
+        <button id="btnBypass" class="bypass-choice"><strong>BYPASS</strong><span>Continue without QC</span></button>
+      </div>
+      <div class="table-wrap">
+        <table><thead><tr><th>FSN</th><th>Product title</th><th>Expected units</th></tr></thead><tbody id="choiceBody"></tbody></table>
+      </div>
+      <button id="btnBackBox" class="secondary">Back</button>
+    </section>
+
+    <section id="screen-qc" class="screen card qc-card">
+      <div class="step">03 &nbsp; QC SCANNING</div>
+      <h2 id="qcTitle"></h2>
+      <div class="progress-label"><span>Units checked</span><strong id="scanCount">0 / 0</strong></div>
+      <progress id="scanProgress" value="0" max="1"></progress>
+      <label for="scanInput">Scan EAN or WID</label>
+      <input id="scanInput" autocomplete="off" spellcheck="false" autocapitalize="characters" inputmode="none" placeholder="Scanner ready">
+      <div id="scanFeedback" class="msg" role="status" aria-live="polite" hidden></div>
+      <div class="table-wrap">
+        <table><thead><tr><th>FSN</th><th>Product title</th><th>Scanned</th><th>Expected</th></tr></thead><tbody id="qcBody"></tbody></table>
+      </div>
+      <button id="btnSubmitAudit" class="primary wide" disabled>Submit QC &rarr;</button>
+      <div class="utility-actions">
+        <button id="btnUndo" class="secondary">Undo last scan</button>
+        <button id="btnBackChoice" class="secondary">Back</button>
+      </div>
+      <p class="hint">Undo clears the latest scan. Clearing a rejected scan keeps successful counts unchanged.</p>
+    </section>
+
+    <section id="screen-packing" class="screen card qc-card">
+      <div class="step">04 &nbsp; FINISH</div>
+      <h2 id="packingTitle">QC complete</h2>
+      <div class="box-summary"><span>BOX ID</span><strong id="packingBox"></strong></div>
+      <div id="packingInfo" class="msg info" hidden></div>
+      <label for="packingSlip">Packing Slip</label>
+      <input id="packingSlip" autocomplete="off" spellcheck="false" placeholder="Scan the matching Packing Slip">
+      <div id="packingMsg" class="msg" role="status" hidden></div>
+      <button id="btnSubmitPacking" class="primary wide">Save &amp; next box &rarr;</button>
+    </section>
+
+    <section id="screen-redo" class="screen card">
+      <div class="step">PREVIOUS QC</div>
+      <h2>Already audited</h2>
+      <div id="redoText" class="msg info"></div>
+      <button id="btnRedoYes" class="primary wide">Redo QC</button>
+      <button id="btnRedoNo" class="secondary">Cancel</button>
+    </section>
+    <footer>Scan. Check. Save. Next box.</footer>
+    <noscript>Enable JavaScript to use QCheck.</noscript>
+  </main>
+  <script src="/static/audit.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "page_url": "http://10.24.1.71/flo-lite/jai_sh_wh_nl_01nl/v2/desktop/ncob/transfer-list",
+  "api_base": "http://10.24.1.71/flo-lite-routes-api/outbound-picking-proxy/api/v3.0/picklists",
+  "flow": "NCOB",
+  "flow_type": ["iwit"],
+  "status": ["COMPLETED"],
+  "range_column": "dispatch_by_date",
+  "days_back": 3,
+  "days_forward": 3,
+  "page_size": 10,
+  "workers": 4,
+  "db_files": {"tl_items": "tl_items.db", "fsn_ean_wid": "FSN_EAN_WID_Title.db", "fetched_tls": "fetched_tls.db"},
+  "timeout_ms": 30000,
+  "headless": false,
+  "browser_channel": "chrome"
+}

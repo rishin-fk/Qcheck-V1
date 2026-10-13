@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QC Data Entry</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; margin: 0; padding: 16px; color: #172b4d; }
+    main { background: white; width: 100%; max-width: 480px; margin: auto; border-radius: 12px; box-shadow: 0 4px 20px #172b4d12; padding: 20px; }
+    h1 { font-size: 22px; margin: 0 0 8px; }
+    .intro { color: #52647a; margin: 0 0 12px; font-size: 14px; }
+    label, legend { display: block; font-size: 14px; font-weight: 600; margin: 10px 0 5px; }
+    input[type="text"] { width: 100%; padding: 8px 10px; border: 1px solid #a8b5c5; border-radius: 7px; font: 15px 'Segoe UI', Arial, sans-serif; }
+    input:focus-visible, button:focus-visible { outline: 3px solid #a8ccff; outline-offset: 2px; }
+    input:disabled { background: #f3f5f7; color: #52647a; }
+    fieldset { padding: 0; border: 0; margin: 10px 0 0; }
+    legend { padding: 0; margin: 0 0 6px; }
+    .remarks { display: flex; gap: 12px; }
+    .remarks label { flex: 1; margin: 0; border: 1px solid #a8b5c5; border-radius: 7px; padding: 10px; cursor: pointer; }
+    input[type="radio"] { accent-color: #1765c0; }
+    button { width: 100%; padding: 11px; margin-top: 16px; background: #1765c0; border: 0; border-radius: 7px; color: white; font: inherit; font-weight: 600; cursor: pointer; }
+    button:disabled { background: #99aabd; cursor: not-allowed; }
+    .error { color: #b42318; }
+    .success { color: #166534; }
+    .loading { color: #345d87; }
+    #matchError { font-size: 13px; min-height: 18px; margin-top: 6px; }
+    #statusMsg { font-size: 13px; line-height: 1.5; margin-top: 10px; overflow-wrap: anywhere; }
+    #serverStatus { font-size: 13px; line-height: 1.5; border-radius: 7px; padding: 11px 13px; background: #eef4fb; white-space: pre-line; overflow-wrap: anywhere; }
+    #serverStatus.warning { background: #fff4df; color: #7a4500; }
+    #serverStatus.error { background: #fff0ee; color: #a5261a; }
+    .hint { font-size: 12px; line-height: 1.5; color: #52647a; margin: 12px 0 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>QC Data Entry</h1>
+    <p class="intro">Match the box and packing slip, then record the QC result.</p>
+    <div id="serverStatus" role="status">Loading form controls…</div>
+    <form id="qcForm">
+      <label for="boxId">BOX ID</label>
+      <input type="text" id="boxId" maxlength="200" autocomplete="off" required autofocus>
+      <label for="packingSlip">Packing Slip</label>
+      <input type="text" id="packingSlip" maxlength="200" autocomplete="off" aria-describedby="matchError" required>
+      <div id="matchError" class="error" aria-live="polite"></div>
+      <label for="tableNo">Table No</label>
+      <input type="text" id="tableNo" maxlength="80" autocomplete="off" required>
+      <label for="qcDoneBy">QC Done By</label>
+      <input type="text" id="qcDoneBy" maxlength="200" autocomplete="off" required>
+      <fieldset>
+        <legend>Remark</legend>
+        <div class="remarks">
+          <label><input type="radio" name="remark" value="Done" id="btnDone" required> Done</label>
+          <label><input type="radio" name="remark" value="Bypass" id="btnBypass"> Bypass</label>
+        </div>
+      </fieldset>
+      <button type="submit" id="submitBtn" disabled>Submit</button>
+      <div id="statusMsg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="hint">Entries save directly to the database. If a connection fails, use Retry save to confirm the same entry safely.</p>
+    <noscript>This form needs JavaScript enabled to save entries.</noscript>
+  </main>
+  <script>
+    function showFormScriptError(message) {
+      var banner = document.getElementById('serverStatus');
+      banner.className = 'error';
+      banner.textContent = message;
+      document.getElementById('submitBtn').disabled = true;
+    }
+  </script>
+  <script src="{{ url_for('static', filename='qc.js') }}"
+    onerror="showFormScriptError('Cannot load static/qc.js. Create a static folder beside app.py and put qc.js inside it. Restart the server, then press Ctrl+F5.')"
+    onload="if (!window.qcAppReady) showFormScriptError('The form script could not start. Replace static/qc.js with the supplied file, then press Ctrl+F5. Check the browser console for the exact JavaScript error.');"></script>
+</body>
+</html>

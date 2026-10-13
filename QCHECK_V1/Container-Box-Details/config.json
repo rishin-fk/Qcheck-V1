@@ -1,0 +1,27 @@
+{
+  "page_url": "http://10.24.1.71/flo-lite/jai_sh_wh_nl_01nl/v2/desktop/ncob/box-details",
+  "api_base": "http://10.24.1.71/flo-lite-routes-api/outbound-picking-proxy/api/v3.0",
+  "flow": "NCOB",
+  "subflow": ["iwit"],
+  "range_column": "createdAt",
+  "days_back": 3,
+  "days_forward": 3,
+  "page_size": 10,
+  "sorting": {"sortAsc": true, "sortingField": "containerLabel"},
+  "boxes_db": "boxes.db",
+  "items_db": "box_items.db",
+  "interval_min": 2,
+  "table_filters": {
+    "destination": [],
+    "status": ["PACKED"],
+    "planType": [],
+    "pickerId": null,
+    "requestId": null,
+    "externalPicklistId": null,
+    "consignmentId": null,
+    "boxId": null
+  },
+  "timeout_ms": 30000,
+  "headless": true,
+  "browser_channel": "chrome"
+}
